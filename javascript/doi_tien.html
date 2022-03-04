@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+    <tr>
+        <th>Amount</th>
+        <th>From curnecy</th>
+        <th>To curency</th>
+    </tr>
+    <tr>
+        <td><input type="number" id="number"/></td>
+        <td>
+            <select id="select1">
+                <option value="VietNam" id="vn1">VietNam</option>
+                <option value="USD" id="usd1">USD</option>
+            </select>
+        </td>
+        <td>
+            <select id="select2">
+                <option value="VietNam" id="vn2">VietNam</option>
+                <option value="USD" id="usd2">USD</option>
+            </select>
+        </td>
+        <th><p><button onclick="convert()" id="change">Convert</button></p></th>
+    </tr>
+</table>
+<table>
+    <tr>
+        result
+        <td id="kq"></td>
+    </tr>
+</table>
+<script >
+ function convert() {
+                let before = document.getElementById("select1").value;
+                let after = document.getElementById("select2").value;
+                let result = document.getElementById("number").value;
+                result = result * 1;
+            if (before == after) {
+                document.getElementById('kq').innerHTML =result;   
+                } else {
+                            if (before=="VietNam" && after=="USD") {
+                                        document.getElementById("kq").innerHTML = result/23000;
+                            } else {
+                                        document.getElementById("kq").innerHTML = result*23000;
+                            }   
+            }
+ }
+</script>
+</body>
+</html>
+
