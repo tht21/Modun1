@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Máy tính bỏ túi</title>
+    <link rel="stylesheet" type="text/css" href="calculate.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- gia tri input value .value -->
+    <div id="may_tinh">
+        <div id="ket_qua">
+            <div id="ket_qua_cu">
+                <p id="gia_tri_cu"></p>
+            </div>
+            <div id="xuat_ket_qua">
+                <p id="gia_tri_xuat"></p>
+            </div>
+        </div>
+        <div id="keyboard">
+            <button class="key" value="C"  id="key_C" onclick="key_C()" >C</button>
+            <button class="key" value="CE" id="key_CE" onclick="key_CE()">CE</button>
+            <button class="key"  value="%" id="%" onclick="insert(this.value)">%</button>
+            <button class="key"  value="/" id="/" onclick="insert(this.value)">&#247;</button>
+            <button class="number"  value="7" id="7" onclick="insert(this.value)">7</button>
+            <button class="number"  value="8" id="8" onclick="insert(this.value)">8</button>
+            <button class="number"  value="9" id="9" onclick="insert(this.value)">9</button>
+            <button class="key"  value="*" id="*" onclick="insert(this.value)">&times;</button>
+            <button class="number"  value="4" id="4" onclick="insert(this.value)">4</button>
+            <button class="number"  value="5" id="5" onclick="insert(this.value)">5</button>
+            <button class="number"  value="6" id="6" onclick="insert(this.value)">6</button>
+            <button class="key"  value="-" id="-" onclick="insert(this.value)">-</button>
+            <button class="number"  value="1" id="1" onclick="insert(this.value)">1</button>
+            <button class="number"  value="2" id="2" onclick="insert(this.value)">2</button>
+            <button class="number"  value="3" id="3" onclick="insert(this.value)">3</button>
+            <button class="key"  value="+" id="+" onclick="insert(this.value)">+</button>
+            <button class="trong"  value="" id="trong"></button>
+            <button class="number"  value="0" id="0" onclick="insert(this.value)">0</button>
+            <button class="trong"  value="" id="trong"></button>
+            <button class="key"  value="=" id="=" onclick="calculate()">=</button>
+        </div>
+    </div>
+    <script src="calculate.js"></script>
+</body>
+</html>
