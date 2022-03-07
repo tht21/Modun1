@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     
+</body>
+</html>
+<!-- Cách xác định năm nhuận: Những năm chia hết cho 4 là năm nhuận, ngoại trừ những năm chia hết cho 100 mà không chia hết cho 400. -->
+
+<!-- Từ đó, có thể rút gọn thành các quy tắc xác định năm nhuận: -->
+
+<!-- Những năm chia hết cho 4 mà không chia hết cho 100 là năm nhuận -->
+
+<!-- Những năm chia hết cho 100 mà không chia hết cho 400 thì KHÔNG PHẢI là năm nhuận -->
+
+<!-- Những năm chia hết đồng thời cho 100 và 400 là năm nhuận -->
+<!--
+    kET QUAR    
+12: năm nhuận
+13: năm không nhuận
+1000: năm không nhuận
+2000: năm nhuận -->
+<script>
+
+     let  year = parseInt(prompt("import a year"));
+     
+	if(1<= year && year<= 9999){
+		if(year %4==0&&year %100!=0||year %400==0){
+			         	alert(year + " is a leap year");
+
+		}
+	else {
+	alert(year + " is not a leap year");
+
+	}
+	
+}
+
+    // if (year %  4 ==0) {
+    //     if (year % 100 == 0) {
+    //         if (year % 400 == 0) {
+    //             alert( year+" is a leap year");
+    //         } else {
+    //             alert(year + " is NOT a leap year");
+    //         }
+    //     } else {
+    //         alert(year + " is a leap year");
+    //     }
+        
+    // }else {
+    //     alert(year + "is NOT a leap year");
+    // }
+    ///cach 3
+    // let isLeapYear = false;
+    // if (year % 4 == 0) {
+    //     if (year % 100 == 0) {
+    //         if (year % 400 == 0) {
+    //             isLeapYear =true;
+    //         }
+    //     }
+    // } else {
+    //     isLeapYear = true;
+    // }
+    //     if (isLeapYear) {
+    //         alert(year+"is not leap year");
+    //     } else {
+    //         alert(year + " is a leap year");
+    //     }
+</script>
