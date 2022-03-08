@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <table>
+    <table >
     <tr>
         <th>Amount</th>
         <th>From curnecy</th>
@@ -44,10 +44,11 @@
             if (before == after) {
                 document.getElementById('kq').innerHTML =result;   
                 } else  {
+                    
                             if (before=="VietNam" && after=="USD") {
-                                        document.getElementById("kq").innerHTML = result/23000;
+                                        document.getElementById("kq").innerHTML = result/23000 +"vnd" ;
                             } else {
-                                        document.getElementById("kq").innerHTML = result*23000;
+                                        document.getElementById("kq").innerHTML = result*23000+"usd";
                             }   
             }
  }

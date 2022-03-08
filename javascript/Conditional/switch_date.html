@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="" width="400" height="100" cellspacing="">
+    <tr>
+        <td><input type="number" id="thang"/></td>
+        <td><button id="tinh" onclick="date11()">Kết quả</button></td>
+    </tr>
+    <tr colspan="2">
+        <td id="kq"></td>
+    </tr>
+
+</table>
+<script>
+    function date11() {
+        let a = +document.getElementById("thang").value;
+        switch (a){
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 9:
+            case 11:
+                document.getElementById("kq").innerText = "tháng "+ a + "có 31 ngày";
+            break;
+            case 2:
+                document.getElementById("kq").innerText = "tháng "+ a + "có 28 ngày";
+            break;
+            case 4:
+            case 6:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById("kq").innerHTML = "tháng "+ a + " có 30 ngày";
+            break;
+        }
+
+    }
+</script>
+</body>
+</html>
