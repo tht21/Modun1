@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+ 
+<script>
+//    <!-- Cửa hàng của bạn nhận gửi bán sản phẩm cho một công ty khác và sau mỗi tháng bạn cần tính toán số tiền hoa hồng bạn nhận được.
+//  Với mức hoa hồng theo doanh số bán hàng như sau:
+// 5% nếu tổng doanh số nhỏ hơn hoặc bằng 100 triệu.
+// 10% nếu tổng doanh số nhỏ hơn hoặc bằng 300 triệu.
+// 20 % nếu tổng doanh số là lớn hơn 300 triệu -->
+let a= prompt("nhap tong doanh thu");
+a= parseInt(a);
+
+var hoa_hong;
+if (a<=100) {
+    hoa_hong =a*(5/100);
+    document.write(a+"       tong doanh thu co hoa hong la      "+hoa_hong);
+}else if(a<=200) {
+    hoa_hong =a*(10/100);
+    document.write(a+"       tong doanh thu co hoa hong la     "+hoa_hong);
+
+}else if (a>300) {
+    hoa_hong =a*(30/100);
+    document.write(a+"      tong doanh thu co hoa hong la      "+hoa_hong);
+    
+}
+
+
+</script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <select id="intro" onchange="oc()" onmouseover="oc()" onmouseout="oc1()">
+          <option value="a">a</option>
+          <option value="b">b</option>
+</select>
+<button onclick="onc()"id="oc ">click me</button>
+<input type="text" id="name"onkeyup="xu_ly()">
+
+</body>
+</html>
+<script>
+ function oc() {
+    //  var selectvalue= document.getElementById("intro").value;
+    //  alert("selectvalue");
+     document.getElementById("intro").style.color="red";
+
+ }
+ function oc1() {
+    document.getElementById("intro").style.color="black";
+ }
+    function onc() {
+        // var  name= document.getElementById("oc");
+       var a= document.getElementById("oc").innerHTML="hello world";
+       document.write(a);
+    }
+ function name() {
+           var name = document.getElementById("name");        
+    }
+    
+</script>
