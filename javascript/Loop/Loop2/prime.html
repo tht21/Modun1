@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = +prompt("so luong so nguyen to can in ra");
+    let count = 0;
+    let N = 2;
+    let so_nguyen_to = 0;
+    while (count < number) {
+        for (let i = 2; i < N; i++) {
+            if (N % i === 0) {
+                so_nguyen_to = -1;
+                break;
+            }
+        }
+        if (so_nguyen_to !== -1) {
+            document.write(N+" ");
+            count++;
+        }
+        N++;
+    }
+
+</script>
+</body>
+</html>
