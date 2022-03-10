@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //    let array =new array("tai","hieu","huy ","huong")
+       // let array =[ "tai","hieu","huy ","huong"]
+
+              var fruits = ["Táo", "Chuối", "Cam", "Ổi", "Nho"];
+              // truy suat tung phan tu trong mang
+    document.write(fruits[0]+ "<br>"); // Kết quả: Táo
+    document.write(fruits[1]+ "<br>"); // Kết quả: Chuối
+    document.write(fruits[2]+ "<br>"); // Kết quả: Cam
+    document.write(fruits[fruits.length - 1]+ "<br>"); // Kết quả: Nho
+    //lay do dai trong mang
+document.write("tong do dai trong mang"+fruits.length+ "<br>");   
+    // them phan tu moi
+    fruits.push("mau do"+ "<br>");
+     // chay qua ca phan tu cua mang
+     for(var i=0; i<fruits.length; i++){
+        document.write(  fruits[i] + "<br>");
+    }
+    </script>
+</body>
+</html>
