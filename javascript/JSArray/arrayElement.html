@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>JS Bin</title>
+    <style>
+        body {padding-top:50px}
+     </style>
+</head>
+
+<body>
+    <!-- Thêm sự kiện onclick cho button ADD gọi đến hàm add_element_to_array() và DISPLAY gọi đến hàm display_array(). -->
+    <input type="text" id="txtValue"/>
+    <input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();"/>
+    <input type="button" id="btnDisplay" value="Display" onclick="display_array();"/>
+    <div id="result"></div>
+</body>
+
+</html>
+<script>
+// Tạo biến x và khởi tạo bằng 0, x là chỉ số truy cập tới các phần tử trong mảng.
+let x = 0;
+//tao mang array de du lieu nhap vao lop 10
+let array =[];
+// Xây dựng hàm add_element_to_array() để thêm mới một phần tử từ form
+function add_element_to_array() {
+    array[x] =document.getElementById("txtValue").value;
+     alert("Element: " + array[x] + " Added at index " + x);
+     x++;
+     //luu gia tri cu
+     document.getElementById("txtValue").value ="";
+}
+// Xây dựng hàm display_array() để hiển thị các phần tử trong mảng
+function display_array() {
+    let e = "<hr/>";
+
+ for (let i = 0; i < array.length; i++) {
+     e +=  "Element " + i + " = " + array[i] + "<br/>";
+ }document.getElementById("result").innerHTML=e
+}
+
+</script>
