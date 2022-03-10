@@ -11,11 +11,18 @@
     </body>
     </html>
     <script>
-      let value = prompt("Enter a number: ");
+     // let value = prompt("Enter a number: ");
+     
      let number =[ -3,9,5,8,3,2,4,10];
+     let max = number[0];
+     let index =0;
      for (let i = 0; i < number.length; i++) {
-         if (value == number[i]){
-             document.write("nhap "+value+"gia tri trong mang"+number[i]);
-         }
-     }
+        //  if (value == number[i]){
+        //      document.write("nhap "+value+"gia tri trong mang"+number[i]);
+        //  }
+        if(number[i] > max){
+            max = number[i];
+            index=i;       
+        }
+     } document.write("max: " + max + " at position " + index);
     </script>
