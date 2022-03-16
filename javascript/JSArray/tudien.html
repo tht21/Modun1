@@ -1,0 +1,29 @@
+<html>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <head>
+       
+    </head>
+    <body>
+      
+    </body>
+    </html>
+    <script>
+   let english = ["hello", 'goodbye', 'computer'];
+let vietnamese = ['xinchao', 'tambiet', 'maytinh'];
+let word = prompt("hãy nhập vào từ cần tra nghĩa");
+is_found = true;
+for (let i = 0; i <english.length; i++){
+    is_found = false;
+    if (word === english[i]){
+        document.write(vietnamese[i])
+    }else if(word === vietnamese[i]){
+        document.write(english[i]);
+    }
+}
+if (is_found == true){
+    document.write("từ này không có trong từ điển")
+}
+
+
+
+    </script>
