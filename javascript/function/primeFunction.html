@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function isPrime(number) {
+        let count = 0;
+        for (let i = 0; i <=number; i++) {
+               if (number%i ==0 ) { count++;}
+       }
+       if (count==2) {
+           return 1;           
+       } else {
+           return 0;
+       }
+    }
+   let prime = isPrime(11  );
+  // prime>0?alert("so nguyen to"): alert("no so nguyen to ");
+   if (prime>0) {
+       alert("so so_nguyen_to");
+   } else {
+    alert("khong so_nguyen_to");
+   }
+</script>
