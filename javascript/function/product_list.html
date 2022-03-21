@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+<body>
+        <div>
+            <label>Add New</label>
+            <input type="text" name="addNew" id="addNew">
+            <button onclick="add()">submit</button>
+      </div>
+<br>
+<br>
+<table class="table" width=200 px;  cellspacing="" id="show">
+    <thead>
+    <tr>
+        <th>them moi</th>
+        <th>action</th>
+    </tr>
+</thead>
+</table>
+<div id="edit"></div>
+</body>
+</html>
+<script>
+      let product_arr =[]
+    function add() {   
+        var item_addNew = document.getElementById("addNew").value;       
+        product_arr.push(item_addNew);      
+        show_product(); 
+     
+    }
+    function show_product() {
+        let table='<table class="table" width=200 px;  cellspacing="" id="show"></thead><tr>  <th>them moi</th> <th>action</th></tr></thead><tbody>'
+        for (let i = 0; i <product_arr.length; i++) {
+         table += '<tr>'
+            table += '<td>'+product_arr[i]+'</td>'
+            table += '<td> <button onclick="clear('+i+');">delete</button></td>'
+            table += '<td> <button onclick="edit('+i+');">edit</button></td>'
+        table += '</tr>'
+        }
+    table+='</tbody></table>'
+    document.getElementById("show").innerHTML =table;
+    }
+    function clear(index){
+            product_arr.splice(index, 1);
+            alert("muon xoa hay k");
+            show_product();
+        
+    }
+    function edit(index){
+      let s='<input type="text" name="" id="save1" value="'+product_arr[index]+'"> <button onclick="save2('+index+')">save</button>'
+      document.getElementById("edit").innerHTML = s;
+    }
+    function save2(index) {
+        product_arr[index] = document.getElementById('save1').value;
+        // mat input save
+        document.getElementById('edit').innerHTML='';
+        show_product();
+        
+    }
+</script>

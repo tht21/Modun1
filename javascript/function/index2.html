@@ -1,0 +1,37 @@
+
+<script>
+    //tham tri value types 
+    let a=1;
+    //Tạo ra biến a, lưu giá trị của a vào ô nhớ và gán lại địa chỉ ô nhớ cho biến a (a = #a001)
+    let b=a;
+//Tạo ra biến b và gán giá trị của biến a cho b, ở đây chính là địa chỉ địa chỉ ô nhớ của a (b =#a001)
+
+    a=2;
+    //Sửa giá trị của biến a thì giá trị trong ô nhớ được cập nhật
+
+    console.log(b);
+// ----------------------------
+// tham chieuReference Types
+let c = { name: "cat" }
+//Tạo ra biến a, lưu giá trị của a vào ô nhớ và gán lại địa chỉ ô nhớ cho biến a (a = #a001)
+
+let d = c
+//Tạo ra biến b và gán giá trị của biến a cho b, ở đây chính là địa chỉ địa chỉ ô nhớ của a (b =#a001)
+
+c.name = "dog"
+//Sửa giá trị của biến a thì giá trị trong ô nhớ được cập nhật
+
+console.log(d) // { name: "dog" }
+    //-----------------------------------------------
+    //khai bao bien trong ham
+    //khai bao ham trong ham  tinhs pprimetre
+    function showMessage(){
+        // bien dc dinh nghia trong function chi su dg dc tg function
+        var fullName = 'hai';
+        console.log(fullName);
+    }
+    //console.log(fullName);
+
+    showMessage();
+    //--------------------------------------------------------//
+</script>

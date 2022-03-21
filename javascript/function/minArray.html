@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let array =[1,3,-9,5,9]
+
+    function minArray(arrr) {
+        let min= arrr[0];
+        for (let i = 0; i < arrr.length; i++) {
+          if (arrr[i] < min)
+            min = arrr[i];
+         }
+        return min;
+    }
+    let min = minArray(array);
+ alert(min);
+</script>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  function name(pramenter1, pramenter2) {
+    //code
+  }
+
+  //camelCase
+  function xinChao(thamso1, thamso2) {
+    console.log(thamso1, thamso2);
+  }
+  //PascalCase
+  function XinChao() {
+    alert("xin chao");
+  }
+  //Snake_case
+  function xin_chao() {
+    alert("xin chao");
+  }
+  //   xinChao(1,2);
+  // xin_chao();
+  // XinChao();
+
+  //khai báo 1 hàm có tên là sum, có 2 tham số a và tham số b
+  // trong hàm, thực hiện cộng 2 tham số a và b và xuất ra kết quả
+  function sum(a, b) {
+    //  return a + b;
+    console.log(a + b);
+  }
+  //console.log( sum(5,7));
+  sum(5, 7);
+
+  function students(naem, tuoi) {
+    console.log("xin chào    " + naem + ",   ban  " + tuoi + " tuổi");
+  }
+  students("nam", 18);
+  //--------------------------------
+  function kiemtra(number) {
+    number % 2 == 0 ? console.log("so chan") : console.log("so  le");
+  }
+  kiemtra(6);
+  //-------------------------------
+  function sum(a, b = 9) {
+    console.log("tong " + (a + b));
+  }
+  sum(5, 7);
+  sum(5);
+
+  //-------------------------------------------
+  //checkin 7
+  // viết 1 hàm kiểm tra số truyền vào có phải là số chẵn hay ko
+  // - tên hàm: kiemtra
+  // - có một tham số
+  // - trả về true nếu là số chẵn
+  // - trả về false nếu là số lẽ
+  // - gọi hàm và gán vào biến result
+  // - kiểm tra nếu result == true thì xuất ra câu là số chẵn , ngược lại là số lẽ
+  function kiem_tra(number) {
+    return number % 2 == 0;
+  }
+  result = kiem_tra(9);
+  result == true ? console.log("so chan") : console.log("so  le");
+</script>
