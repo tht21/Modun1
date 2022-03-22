@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas
+      id="myCanvas"
+      width="400px"
+      height="200px"
+      style="border: 1px solid #d3d3d3"
+    ></canvas>
+  </body>
+</html>
+<script>
+  function rectangle(dai,rong) {
+    // this.dai = 0;
+    // this.rong = 0;
+    this.dai = dai;
+    this.rong = rong;
+    this.dt = function () {
+      return this.dai * this.rong;
+    };
+    this.cv = function () {
+      return (this.rong + this.dai) / 2;
+    };  
+
+    this.ve = function () {
+      var a = document.getElementById("myCanvas").getContext("2d");
+      a.fillStyle = "black";
+      a.fillRect(366, 10, this.dai, this.rong);
+    };
+  }
+
+    var rectangle1 = new rectangle(200,100);
+
+    // rectangle1.dai = 200;
+    // rectangle1.rong = 100;
+
+    alert(rectangle1.dt());
+    alert(rectangle1.cv());
+    rectangle1.ve();
+</script>

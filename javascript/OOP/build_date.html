@@ -1,0 +1,36 @@
+<script>
+  function myDate(day, month, year) {
+    this.day = day;
+    this.month = month;
+    this.year = year;
+    this.getDay = function () {
+      return this.day;
+    };
+    this.getMonth = function () {
+      return this.month;
+    };
+    this.getYear = function () {
+      return this.year;
+    };
+    this.setDay = function (day) {
+      return (this.day = day);
+    };
+    this.setMonth = function (month) {
+      return (this.month = month);
+    };
+    this.setYear = function (year) {
+      return (this.year = year);
+    };
+  }
+
+  let date = new myDate(2, 2, 2019);
+  //let date = new myDate();
+  let day = date.getDay();
+  let month = date.getMonth();
+  let year = date.getYear();
+  console.log("ngay     " + day + "        thang" + month + "      nam" + year);
+//   date.setDay(1);
+//   date.setMonth(10);
+//   date.setYear(2019);
+//   console.log("ngay     " + day + "        thang" + month + "      nam" + year);
+</script>

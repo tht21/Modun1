@@ -1,0 +1,27 @@
+<script>
+  function students(id, name, address) {
+    this.id = id;
+    this.name = name;
+    this.address = address;
+
+    //dinh nghia phuong thuc getinfor    // tra lai thong tin cua doi tuong
+    this.getInfor = function () {
+      return "Id" + this.id + "Name" + this.name + "Address" + this.address;
+    };
+  }
+  //khoi tao doi tuong
+  let student = new students(1, "John", "ha noi");
+  console.log(student.getInfor());
+  //Tạo một đối tượng thường bắt đầu bằng việc định nghĩa và khởi tạo một biến
+  // var students = {
+  //     id : 1,
+  //     name : "John",
+  //     address : "hn",
+  //     getInfor : function () {
+  //         return "Id"+this.id+"Name"+this.name+"Address"+this.address;
+  //     }
+
+  // }
+  // console.log(students.name);
+  // console.log(students.getInfor())
+</script>
