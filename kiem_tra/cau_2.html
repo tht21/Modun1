@@ -1,0 +1,13 @@
+ <script>
+        let array = [3,1,5,7,9,5,6,4];
+     function tryRemoveFromArray(arr,x) {
+         for (let i=0; i<arr.length;i++) {
+             if (arr[i]==x) {
+                 arr.splice(i,1);
+             }
+         }
+         return arr;
+     }
+    console.log( tryRemoveFromArray(array,2))
+    </script>
+    

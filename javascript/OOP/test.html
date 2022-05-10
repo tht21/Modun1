@@ -1,0 +1,72 @@
+<script>
+//   var person1 = {
+//     name: "nguyen",
+//     age: 18,
+//     play: function () {
+//       console.log("di choi");
+//     },
+//   };
+//   console.log(person1);
+//   console.log(person1.play());
+
+
+//     function person(name,age){
+//           this.name = name;
+//           this.age = age;
+//         this.getinfor=function( ){
+//            return this.name+this.age;
+//         }
+//         //taoj get set
+//         this.setName = function(tham_so){
+//         this.name = tham_so;
+//         }
+//       }
+
+//   //khoi tao doi tuong
+// let student = new person("nguyen",18);
+// let student2 = new person("nguyen van a",19);
+// student.setName("doi so")
+
+// console.log(student.getinfor())
+// student2.getinfor()
+function student(ma_sv,name,age,class_name){
+  this.masv = ma_sv;
+  this.name = name;
+  this.age = age;
+  this.class_name = class_name;
+this.getMasv = function () {
+  return this.masv
+}
+this.getName = function () {
+  return this.name
+}
+this.getAge = function () {
+  return this.age
+}
+this.getClassName = function () {
+  return this.class_name
+}
+this.setMasv = function(masv){
+  this.masv= masv;
+}
+this.setName = function(name){
+  this.name= name;
+}
+this.setAge = function(age){
+  this.age= age;
+}
+this.setClassName = function(class_name){
+  this.class_name= class_name;
+}
+this.getinfor = function(){
+  console.log(this.masv+'  '+this.name+'   '+this.age+'   '+this.class_name) 
+}
+}
+var student2 = new student(1,"hai",18,"c00202")
+student2.getinfor()
+student2.setMasv(2)
+student2.setName("hai nam")
+student2.setAge(19)
+student2.setClassName("c001010")
+student2.getinfor()
+</script>
