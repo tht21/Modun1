@@ -1,0 +1,126 @@
+<script>
+    
+const canvas = document.getElementById("myCanvas");
+const c = canvas.getContext("2d");
+function player(x, y) {
+  this.img = new Image();  
+	this.img.src = './img/car.png';
+  //x,y  toa do vi tri
+  // x: 150,
+  // y: 500
+  this.x = x;
+  this.y = y;
+  this.width = 100;
+  this.height = 100;
+  this.draw_player = function () {
+    //hien thi player
+    c.clearRect(0, 0, 368, 568);
+    c.drawImage(this.img,this.x,this.y,this.width,this.height);
+   
+  };
+
+  this.update = function () {
+    //su kien Trình lắng nghe sự kiện
+    document.addEventListener("keydown", (key) => {
+      switch (key.keyCode) {
+        case 37:
+          if (this.x > 0) this.x -= 0.01;
+          break;
+        case 38:
+          this.y -= 0.01;
+          break;
+        case 39:
+          if (this.x + 30 <= 368) this.x += 0.01;
+          break;
+
+        case 40:
+          this.y += 0.01;
+          break;
+      }
+    });
+  };
+}
+
+var roads = new Load();
+var players = new player(135, 450);
+// var enemys = new enemy('img/car.png',0, 0,100,100);
+// var enemys1 = new enemy('img/car.png',150, 0,100,100);
+// var enemys2 = new enemy(280, 85);
+
+// function vacham() {
+//   if (
+//     (players.x + players.width >= enemys.x && enemys.x + enemys.width >= players.x && players.y + players.width >= enemys.y && enemys.y + enemys.width >= players.y) ==
+//     true
+//   ) {
+//     alert("dung");
+//   }
+  //  if(((o.x+o.width >= x2) && (x2+w2 >= x1) && (y1+w1 >= y2) && (y2+w2 >= y1)) == true
+  //  ){
+  //    alert("dung")
+  //  }
+//}
+//ham  ve vach trang
+function Load(){
+   this.y = 0;
+    this.animate_chay = function() {
+        if (this.y > canvas.height) {
+            this.y = 0;
+        }
+        this.y += 1;
+    }
+
+    this.draw = function()  {
+  this.animate_chay();
+      c.beginPath();
+      c.rect(canvas.width / 3 - 5, this.y - 600, 15, 80);
+      c.rect(canvas.width / 3 - 5, this.y - 450, 15, 80);
+      c.rect(canvas.width / 3 - 5, this.y - 300, 15, 80);
+      c.rect(canvas.width / 3 - 5, this.y - 150, 15, 80);
+      c.rect(canvas.width / 3 - 5, this.y, 15, 80);
+      c.rect(canvas.width / 3 - 5, this.y + 150, 15, 80);
+      c.rect(canvas.width / 3 - 5, this.y + 300, 15, 80);
+      c.rect(canvas.width / 3 - 5, this.y + 450, 15, 80);
+      c.rect(canvas.width / 3 - 5, this.y + 600, 15, 80);
+
+      c.rect(canvas.width * 2 / 3 - 5, this.y - 600, 15, 80);
+      c.rect(canvas.width * 2 / 3 - 5, this.y - 450, 15, 80);
+      c.rect(canvas.width * 2 / 3 - 5, this.y - 300, 15, 80);
+      c.rect(canvas.width * 2 / 3 - 5, this.y - 150, 15, 80);
+      c.rect(canvas.width * 2 / 3 - 5, this.y, 15, 80);
+      c.rect(canvas.width * 2 / 3 - 5, this.y + 150, 15, 80);
+      c.rect(canvas.width * 2 / 3 - 5, this.y + 300, 15, 80);
+      c.rect(canvas.width * 2 / 3 - 5, this.y + 450, 15, 80);
+      c.rect(canvas.width * 2 / 3 - 5, this.y + 600, 15, 80);
+
+      c.fillStyle = "white";
+      c.fill();
+  }}
+  
+function frameUpdate() {
+  
+
+  //vacham();
+  //-----------------------------
+  players.update();
+  // enemys.update();
+  // enemys1.update();
+  // enemys2.update();
+  //----------------------------
+  players.draw_player();
+  // enemys.draw_enemy();
+  //  enemys1.draw_enemy();
+  // enemys2.draw_enemy();
+  roads.draw()
+ 
+  window.requestAnimationFrame(frameUpdate);
+}
+frameUpdate();
+setInterval(() => {
+  if (strart) {
+    players.draw_player();
+    roads.draw()
+  }
+},1)
+let start =true;
+
+</script>

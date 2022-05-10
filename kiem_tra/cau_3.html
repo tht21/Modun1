@@ -1,0 +1,18 @@
+<script>
+  function isFibonacci(num) {
+    let fib1 = 0;
+    let fib2 = 1;
+    let fib = 1;
+    while (fib1 + fib2 <= num) {
+      fib = fib1 + fib2;
+      fib1 = fib2;
+      fib2 = fib;
+    }
+    if (fib == num || num == 0) {
+      return true ;
+    } else {
+     return false;
+    }
+  }
+ console.log( isFibonacci(611));
+</script>

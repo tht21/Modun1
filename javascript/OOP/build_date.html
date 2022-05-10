@@ -22,14 +22,17 @@
       return (this.year = year);
     };
   }
-
+//khoi taoj doi tuong
   let date = new myDate(2, 2, 2019);
-  //let date = new myDate();
+  // console.log(date.getDay());
+  // date.setDay(30)
+  // console.log(date.getDay());
+//  let date = new myDate();
   let day = date.getDay();
   let month = date.getMonth();
   let year = date.getYear();
   console.log("ngay     " + day + "        thang" + month + "      nam" + year);
-//   date.setDay(1);
+  date.setDay(1);
 //   date.setMonth(10);
 //   date.setYear(2019);
 //   console.log("ngay     " + day + "        thang" + month + "      nam" + year);

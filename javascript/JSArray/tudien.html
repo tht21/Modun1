@@ -11,19 +11,26 @@
    let english = ["hello", 'goodbye', 'computer'];
 let vietnamese = ['xinchao', 'tambiet', 'maytinh'];
 let word = prompt("hãy nhập vào từ cần tra nghĩa");
-is_found = true;
-for (let i = 0; i <english.length; i++){
-    is_found = false;
-    if (word === english[i]){
-        document.write(vietnamese[i])
-    }else if(word === vietnamese[i]){
-        document.write(english[i]);
+// is_found = true;
+// for (let i = 0; i <english.length; i++){
+//     is_found = false;
+//     if (word === english[i]){
+//         document.write(vietnamese[i])
+//     }else if(word === vietnamese[i]){
+//         document.write(english[i]);
+//     }
+// }
+// if (is_found == true){
+//     document.write("từ này không có trong từ điển")
+// }
+
+var found = -1;
+for(key in english){
+    if (english[key] == word) {
+        found =key;
     }
 }
-if (is_found == true){
-    document.write("từ này không có trong từ điển")
-}
-
+console.log("dich ra la "+vietnamese[found]);
 
 
     </script>
